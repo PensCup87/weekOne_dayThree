@@ -75,9 +75,44 @@ namespace weekOne_dayThree
             //    Console.WriteLine("That's not really your age");
             //}
 
+            //SWITCH STATEMENTS - checks for a single value, but has different format
+
+            Console.WriteLine("How many point did you earn?");
+            int pointsEarned = int.Parse(Console.ReadLine());
+
+            switch (pointsEarned)
+            {
+                //case 0 is if the input is Zero
+                case 0:
+                    Console.WriteLine("You loose");
+                    break;
+                // case 1 is user entered 1
+                case 1:
+                    Console.WriteLine("Needs Practice");
+                    break;
+                //
+                case 2:
+                    Console.WriteLine("On target");
+                    break;
+
+                case 3:
+                    Console.WriteLine("Superstar");
+                    break;
+
+                case 4:
+                    Console.WriteLine("Overachiever");
+                    break;
+
+                //Each program NEEDS a Default to catch any values not mentioned
+
+                default:
+                    Console.WriteLine("Invalid score entered");
+                    break;
+
+            }
 
 
-            
+
 
 
 
