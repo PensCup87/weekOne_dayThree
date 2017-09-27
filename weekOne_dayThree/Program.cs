@@ -77,41 +77,61 @@ namespace weekOne_dayThree
 
             //SWITCH STATEMENTS - checks for a single value, but has different format
 
-            Console.WriteLine("How many point did you earn?");
-            int pointsEarned = int.Parse(Console.ReadLine());
+            //Console.WriteLine("How many point did you earn?");
+            //int pointsEarned = int.Parse(Console.ReadLine());
 
-            switch (pointsEarned)
+            //switch (pointsEarned)
+            //{
+            //    //case 0 is if the input is Zero
+            //    case 0:
+            //        Console.WriteLine("You loose");
+            //        break;
+            //    // case 1 is user entered 1
+            //    case 1:
+            //        Console.WriteLine("Needs Practice");
+            //        break;
+            //    //
+            //    case 2:
+            //        Console.WriteLine("On target");
+            //        break;
+
+            //    case 3:
+            //        Console.WriteLine("Superstar");
+            //        break;
+
+            //    case 4:
+            //        Console.WriteLine("Overachiever");
+            //        break;
+
+            //    //Each program NEEDS a Default to catch any values not mentioned
+
+            //    default:
+            //        Console.WriteLine("Invalid score entered");
+            //        break;
+            //        }
+
+            //int guests = 4;
+            Console.WriteLine("How many guests are eating?");
+            int guests = int.Parse(Console.ReadLine());
+            //int guestPaid = 13;
+            Console.WriteLine("How much did each person pay?");
+            int guestPaid = int.Parse(Console.ReadLine());
+
+            float largeDiscountAmount = .90f;
+            float smallDiscountAmount = .95f;
+            float totalBill = (guests * guestPaid);
+            float largeDiscountBill = totalBill * largeDiscountAmount;
+            float smallDiscountBill = totalBill * smallDiscountAmount;
+
+            if (totalBill >= 50)
             {
-                //case 0 is if the input is Zero
-                case 0:
-                    Console.WriteLine("You loose");
-                    break;
-                // case 1 is user entered 1
-                case 1:
-                    Console.WriteLine("Needs Practice");
-                    break;
-                //
-                case 2:
-                    Console.WriteLine("On target");
-                    break;
-
-                case 3:
-                    Console.WriteLine("Superstar");
-                    break;
-
-                case 4:
-                    Console.WriteLine("Overachiever");
-                    break;
-
-                //Each program NEEDS a Default to catch any values not mentioned
-
-                default:
-                    Console.WriteLine("Invalid score entered");
-                    break;
-
+                Console.WriteLine("Your total is $" + largeDiscountBill);
             }
 
-
+            else
+            {
+                Console.WriteLine("Your bill is $" + totalBill);
+            }
 
 
 
